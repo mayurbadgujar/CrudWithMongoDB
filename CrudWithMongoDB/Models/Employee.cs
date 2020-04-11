@@ -13,6 +13,8 @@ namespace CrudWithMongoDB.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public String Id { get; set; }
         public string Name { get; set; }
+        public DateTime DOB { get; set; }
+        public string Gender { get; set; }
         public string Department { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

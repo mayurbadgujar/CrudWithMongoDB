@@ -60,7 +60,13 @@ namespace CrudWithMongoDB.Controllers
                 else
                 {
                     var update = collection.FindOneAndUpdateAsync(Builders<Employee>.Filter.Eq("Id", employee.Id),
-                                 Builders<Employee>.Update.Set("Name", employee.Name).Set("Department", employee.Department).Set("Address", employee.Address).Set("City", employee.City).Set("Country", employee.Country));
+                                 Builders<Employee>.Update.Set("Name", employee.Name)
+                                 .Set("DOB", employee.DOB)
+                                 .Set("Gender", employee.Gender)
+                                 .Set("Department", employee.Department)
+                                 .Set("Address", employee.Address)
+                                 .Set("City", employee.City)
+                                 .Set("Country", employee.Country));
                     return new Status
                     {
                         Result = "Success",
